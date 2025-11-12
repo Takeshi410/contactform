@@ -25,4 +25,3 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('/admin/search', [AdminController::class, 'search']);
 
-Route::get('/modal', [ModalController::class, 'modal']);

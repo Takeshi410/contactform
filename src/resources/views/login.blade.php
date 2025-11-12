@@ -18,14 +18,26 @@
             <h2>Login</h2>
         </div>
     </div>
+
     <div class="login-box">
         <form action="/login" method="post">
             @csrf
             <div class="login-box__inner">
                 <h3>メールアドレス</h3>
-                <input type="text" class="login-box__inner--input" name="email">
+                <input type="text" class="login-box__inner--input" name="email" value="{{ old('email') }}">
                 <h3>パスワード</h3>
                 <input type="password" class="login-box__inner--input" name="password">
+
+                @if ($errors->any())
+                    <div class="error-message">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <div class="login-button">
                     <button class="login-button--submit">ログイン</button>
                 </div>

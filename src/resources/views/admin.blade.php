@@ -19,30 +19,33 @@
         <h2>Admin</h2>
     </div>
 
-    <form action="/admin/search" class="search-rom">
-        <div class="search-form__item">
-            <input type="text" class="search-form__item--keyword" name="keyword" value="{{ old('keyword') }}" placeholder="名前やメールアドレスを入力してください">
+    <form action="/admin/search">
+    <div class="search-form__item">
+        <input type="text" class="search-form__item--keyword" name="keyword" value="{{ request('keyword') }}" placeholder="名前やメールアドレスを入力してください">
 
-            <select name="gender" id="" class="search-form__item--gender">
-                <option value="">性別</option>
-                <option value="1">男性</option>
-                <option value="2">女性</option>
-                <option value="3">その他</option>
-            </select>
+        <select name="gender" .search-form__item-- class="search-form__item--gender">
+            <option value="">性別</option>
+            <option value="1" {{ request('gender') === '1' ? 'selected' : '' }}>男性</option>
+            <option value="2" {{ request('gender') === '2' ? 'selected' : '' }}>女性</option>
+            <option value="3" {{ request('gender') === '3' ? 'selected' : '' }}>その他</option>
+        </select>
 
-            <select name="category" id="" class="search-form__item--category">
-                <option value="">お問い合わせの種類</option>
-                @foreach ($categories as $category)
-                <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
-                @endforeach
-            </select>
+        <select name="category" .search-form__item-- class="search-form__item--category">
+            <option value="">お問い合わせの種類</option>
+            @foreach ($categories as $category)
+            <option value="{{ $category['id'] }}" {{ request('category') == $category->id ? 'selected' : '' }}>{{ $category['content'] }}</option>
+            @endforeach
+        </select>
 
-            <input type="date" name="date" class="search-form__item--date">
+        <input type="date" name="date" class="search-form__item--date" value="{{ request('date') }}" >
 
-            <button>検索</button>
-            <button>リセット</button>
-        </div>
+        <button>検索</button>
     </form>
+    <form action="/reset">
+        <button class="search-form__reset">リセット</button>
+    </form>
+    </div>
+
 
     <div class="admin__pagination">
     {{ $contacts->appends(request()->query())->links() }}

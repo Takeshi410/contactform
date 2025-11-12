@@ -10,15 +10,13 @@
         <h2>Contact</h2>
     </div>
 
-     @if($errors->any())
-
-                <ul>
-                    @foreach($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-
-        @endif
+    @if($errors->any())
+        <ul>
+            @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
 
 <div class="contact-table">
     <form action="/confirm" method="post">
@@ -35,12 +33,6 @@
                         <input type="text" name="last_name" class="create-form__input--last-name" value="{{ old('last_name') }}" placeholder="例：山田" />
                         <input type="text" name="first_name" class="create-form__input--first-name" value="{{ old('first_name') }}" placeholder="例：太郎" />
                     </div>
-                    @if ($errors->has('last_name'))
-                        {{$errors->first('last_name')}}
-                    @endif
-                    @if ($errors->has('first_name'))
-                        {{$errors->first('first_name')}}
-                    @endif
                 </td>
             </tr>
 
@@ -126,7 +118,7 @@
                         <select name="category_id" class="create-form__input-category">
                             <option value="">お問い合わせ種類</option>
                             @foreach ($categories as $category)
-                            <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
+                            <option value="{{ $category['id'] }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category['content'] }}</option>
                             @endforeach
                         </select>
                     </div>

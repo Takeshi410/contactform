@@ -24,19 +24,23 @@
             <div class="register-box__inner">
                 <h3>お名前</h3>
                 <input type="text" class="register-box__inner--input" name="name" value="{{ old('name') }}">
-                @error('name')
-                {{ $message }}
-                @enderror
+
                 <h3>メールアドレス</h3>
                 <input type="text" class="register-box__inner--input" name="email" value="{{ old('email') }}">
-                @error('nemail')
-                {{ $message }}
-                @enderror
+
                 <h3>パスワード</h3>
                 <input type="password" class="register-box__inner--input" name="password" >
-                @error('password')
-                {{ $message }}
-                @enderror
+
+                @if ($errors->any())
+                    <div class="error-message">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <div class="register-button">
                     <button class="register-button--submit">登録</button>
                 </div>

@@ -34,8 +34,10 @@ class AdminController extends Controller
         return view('admin', compact('contacts', 'categories'));
     }
 
-    // public function store()
-    // {
-    //     return view('register');
-    // }
+    public function reset() {
+        $contacts = Contacts::with('category')->Paginate(8);
+        $categories = Categories::all();
+        return view('admin', compact('contacts', 'categories'));
+    }
+
 }

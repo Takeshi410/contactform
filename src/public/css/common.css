@@ -1,0 +1,41 @@
+* {
+    font-family: serif;
+}
+
+.header {
+    background: #FFF;
+    padding:0;
+    margin:0;
+}
+
+.header__inner {
+    margin: 0 auto;
+    max-width: 1230;
+    min-width: 800px;
+    height: 100px;
+    border-bottom: 1px solid #E0DFDE;
+    display: flex;
+    position: relative;
+}
+
+.header__logo {
+    color: #8B7969;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.section__title {
+    text-align: center;
+}
+
+h2 {
+    color: #8B7969;
+    text-decoration: none;
+    font-weight: bold;
+}

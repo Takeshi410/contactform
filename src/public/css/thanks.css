@@ -1,0 +1,44 @@
+.thanks__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.thanks__content::after {
+    content:'Thank you';
+    position: absolute;
+    white-space: nowrap;
+    font-size: 280px;
+    font-weight: bold;
+    color: rgba(139, 121, 105, 0.05);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.thanks__message {
+    color:#8B7969;
+    font-size: 30px;
+}
+
+.thanks__button {
+    width: 140px;
+    margin: 50px auto;
+}
+
+.thanks__button--submit {
+    padding: 5px;
+    width: 100%;
+    height: 46px;
+    border: none;
+    border-radius: 3px;
+    background: #8B7969;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+

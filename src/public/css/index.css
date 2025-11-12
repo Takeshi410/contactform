@@ -1,0 +1,162 @@
+.contact__content {
+    margin: 0 auto;
+    padding: 30px 15;
+    max-width: 1230px;
+    min-width: 900px;
+}
+
+.contact-table {
+    margin: 30px auto;
+    width: 70%;
+}
+
+.contact-table__inner {
+    width: 100%;
+}
+
+.contact-table__item {
+    width: 30%;
+}
+
+.contact-table__input {
+    width: 70%;
+    padding: 0 50px;
+}
+
+.contact-form__item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-form__item-p {
+    font-size: 20px;
+    color: #8B7969;
+}
+
+.contact-form__item--span {
+    color: red;
+    font-size: 16px;
+}
+
+.contact-form__input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+::placeholder {
+    color: #BEB1A6;
+}
+
+.create-form__input--last-name,
+.create-form__input--first-name {
+    height: 38px;
+    width: 47%;
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 18px;
+    color: #8B7969;
+}
+
+.create-form__input--first-name {
+    margin-left: 6%;
+}
+
+.create-form__input--gender {
+    accent-color: #8B7969;
+    transform: scale(2);
+    margin: 0 10px;
+}
+
+.gender-label {
+    font-size: 22px;
+    margin-right: 20px;
+    color: #8B7969;
+}
+
+.create-form__input--email {
+    height: 38px;
+    width: 100%;
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 18px;
+}
+
+.create-form__input--tel {
+    height: 38px;
+    width: 30%;
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    color: #8B7969;
+}
+
+.tel-hyphen {
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+.create-form__input--email {
+    height: 38px;
+    width: 100%;
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 18px;
+    color: #8B7969;
+}
+
+.create-form__input--address {
+    height: 38px;
+    width: 100%;
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 18px;
+    color: #8B7969;
+}
+
+.create-form__input--building {
+    height: 38px;
+    width: 100%;
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 18px;
+    color: #8B7969;
+}
+
+.create-form__input-category {
+    height: 38px;
+    width: 40%;
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 18px;
+    color: #8B7969;
+}
+
+.create-form__input--detail {
+    height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 18px;
+    color: #8B7969;
+    resize: vertical;
+}
+
+.create-form__button {
+    width: 160px;
+    margin: 50px auto;
+}
+
+.create-form__button--submit {
+    padding: 5px;
+    width: 100%;
+    height: 46px;
+    border: none;
+    border-radius: 3px;
+    background: #8B7969;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
